@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/31ff4c85db.js" crossorigin="anonymous"></script>
+    <title>Menú fixed blur</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navBar" id="navBar">
+            <div class="brand"> <a href="#seccionPrimera"><img src="./img/Marca.svg" alt=""></a></div>
+            <div class="menuDesktop" id="menuDesktop">
+                <a class="itemMenu"> INICIO</a>
+                <a class="itemMenu"> CLIENTES</a>
+                <a class="itemMenu"> PROYECTOS</a>
+                <a class="itemMenu">NOTICIAS </a>
+                <a href="#contacto" class="itemMenu">CONTACTO</a>
+            </div>
+        </nav>
+        <nav class="navBarMobile">
+            <div class="brandMobile"> <img src="./img/Marca-logo.svg" alt=""></div>
+            <div id="toggle" class="deploy">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+        </nav>
+        <div class="backMenu">
+            <div class="menuMobile" id="menuMobile">
+                <div><a class="itemMenuMobile" > INICIO</a></div>
+                <div><a class="itemMenuMobile" href="#seccionDos"> CLIENTES</a></div>
+                <div><a class="itemMenuMobile" href="#seccionTres"> PROYECTOS</a></div>
+                <div><a class="itemMenuMobile" href="#seccionCuatro">NOTICIAS</a></div>
+                <div><a class="itemMenuMobile" href="#seccionCinco">CONTACTO</a></div>
+                <div class="navBarRRSS">
+                    <a href="" class="itemMenuRRSS"><i class="fa fa-instagram"></i></a>
+                    <a href="" class="itemMenuRRSS"><i class="fa fa-envelope"></i></a>
+                    <a href="https://wa.me/ + número prefijo país sin signo + número de teléfono" class="itemMenuRRSS"
+                        target="_blank"><i class="fa fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <section id="seccionPrimera" class="seccionPrimera">
+        <article>
+
+        </article>
+    </section>
+
+    <section id="nosotros" class="seccionSegunda">
+        <article>
+            <h2>NOSOTROS</h2>
+        </article>
+    </section>
+
+    <section id="equipo" class="seccionTercera">
+        <article>
+            <h2> EQUIPO</h2>
+        </article>
+    </section>
+
+    <section id="nuestraHistoria" class="seccionCuarta">
+        <article>
+            <h2>NUESTRA HISTORIA</h2>
+        </article>
+    </section>
+
+    <section id="contacto" class="seccionQuinta">
+        <article>
+            <h2>CONTACTO</h2>
+        </article>
+    </section>
+    <script src="./js/menuToggle.js"></script>
+    
+    <script src="./js/fixedNavBar.js"></script>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 // Versión ultra-simplificada
 function initFixedNavbar() {
     const header = document.querySelector('#header');
-    const threshold = 50;
+    const threshold = 150;
     
     if (!header) return;
     

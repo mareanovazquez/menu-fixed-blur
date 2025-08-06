@@ -124,13 +124,14 @@ body {
     height: 5px;
     margin: 2px 0;
     transition: all var(--transition-medium) var(--transition-ease-in-out);
-    background-color: var(--color-accent-secondary);}
+    background-color: var(--color-accent-secondary);
+}
 
 /* Estados activos del toggle */
 .menu-toggle--active .menu-toggle__line:nth-child(1) {
     transform: rotate(45deg) translate(3px, 4px);
     transition: var(--transition-slow);
-    }
+}
 
 .menu-toggle--active .menu-toggle__line:nth-child(2) {
     opacity: 0;
@@ -191,7 +192,7 @@ body {
 .mobile-menu__link:hover,
 .mobile-menu__link:focus {
     color: var(--color-accent-secondary);
-    }
+}
 
 /* ===== REDES SOCIALES MÓVIL ===== */
 .mobile-menu__social {
@@ -243,6 +244,7 @@ body {
 .section__title {
     font-size: var(--font-size-h2);
     text-align: center;
+    color: var(--color-primary-text);
 }
 
 /* Colores específicos de cada sección */
@@ -330,16 +332,21 @@ body {
 /* ===== RESPONSIVE DESIGN ===== */
 @media (min-width: 992px) {
     body {
-        padding-top: var(--nav-height-desktop);
+        padding-top: 0;
     }
 
     .header {
+        position: static;
         height: var(--nav-height-desktop);
+        box-shadow: none;
+
     }
-.header--scrolled {
-    background-color: var(--color-nav-bg-blur);
-    backdrop-filter: var(--blur-backdrop);
-}
+
+    .header--scrolled {
+        background-color: var(--color-nav-bg-blur);
+        backdrop-filter: var(--blur-backdrop);
+    }
+
     .header--fixed {
         position: fixed;
         width: 100%;
@@ -395,8 +402,11 @@ body {
     outline-offset: 2px;
 }
 
+.menu__link:hover {
+    color: var(--color-accent-secondary);
+}
 /* Estados hover mejorados */
-.menu__link:hover::after {
+/* .menu__link:hover::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -406,8 +416,8 @@ body {
     height: 2px;
     background-color: var(--color-accent-secondary);
     transition: width var(--transition-fast) var(--transition-ease);
-}
+} */
 
-.menu__link:hover::after {
+/* .menu__link:hover::after {
     width: 100%;
-}
+} */

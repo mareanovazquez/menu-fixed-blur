@@ -16,73 +16,125 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navBar" id="navBar">
-            <div class="brand"> <a href="#seccionPrimera"><img src="./img/Marca.svg" alt=""></a></div>
-            <div class="menuDesktop" id="menuDesktop">
-                <a class="itemMenu"> INICIO</a>
-                <a class="itemMenu"> CLIENTES</a>
-                <a class="itemMenu"> PROYECTOS</a>
-                <a class="itemMenu">NOTICIAS </a>
-                <a href="#contacto" class="itemMenu">CONTACTO</a>
+   <!-- HEADER PRINCIPAL -->
+    <header class="header" id="header">
+        <nav class="navigation" role="navigation" aria-label="Navegación principal">
+            
+            <!-- LOGO/BRAND -->
+            <div class="brand">
+                <a href="#inicio" class="brand__link" aria-label="Ir al inicio">
+                    <img class="brand__image" src="./img/Marca.svg" alt="">
+                </a>
             </div>
-        </nav>
-        <nav class="navBarMobile">
-            <div class="brandMobile"> <img src="./img/Marca-logo.svg" alt=""></div>
-            <div id="toggle" class="deploy">
-                <div class="one"></div>
-                <div class="two"></div>
-                <div class="three"></div>
-            </div>
-        </nav>
-        <div class="backMenu">
-            <div class="menuMobile" id="menuMobile">
-                <div><a class="itemMenuMobile" > INICIO</a></div>
-                <div><a class="itemMenuMobile" href="#seccionDos"> CLIENTES</a></div>
-                <div><a class="itemMenuMobile" href="#seccionTres"> PROYECTOS</a></div>
-                <div><a class="itemMenuMobile" href="#seccionCuatro">NOTICIAS</a></div>
-                <div><a class="itemMenuMobile" href="#seccionCinco">CONTACTO</a></div>
-                <div class="navBarRRSS">
-                    <a href="" class="itemMenuRRSS"><i class="fa fa-instagram"></i></a>
-                    <a href="" class="itemMenuRRSS"><i class="fa fa-envelope"></i></a>
-                    <a href="https://wa.me/ + número prefijo país sin signo + número de teléfono" class="itemMenuRRSS"
-                        target="_blank"><i class="fa fa-whatsapp"></i></a>
-                </div>
-            </div>
-        </div>
 
+            <!-- MENÚ DESKTOP -->
+            <div class="menu">
+                <ul class="menu__list" role="menubar">
+                    <li class="menu__item" role="none">
+                        <a href="#inicio" class="menu__link" role="menuitem">INICIO</a>
+                    </li>
+                    <li class="menu__item" role="none">
+                        <a href="#nosotros" class="menu__link" role="menuitem">NOSOTROS</a>
+                    </li>
+                    <li class="menu__item" role="none">
+                        <a href="#equipo" class="menu__link" role="menuitem">EQUIPO</a>
+                    </li>
+                    <li class="menu__item" role="none">
+                        <a href="#historia" class="menu__link" role="menuitem">HISTORIA</a>
+                    </li>
+                    <li class="menu__item" role="none">
+                        <a href="#contacto" class="menu__link" role="menuitem">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- BOTÓN TOGGLE MÓVIL -->
+            <button 
+                class="menu-toggle" 
+                id="menuToggle" 
+                aria-label="Abrir menú de navegación"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+            >
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+            </button>
+        </nav>
     </header>
-    <section id="seccionPrimera" class="seccionPrimera">
-        <article>
 
-        </article>
-    </section>
+    <!-- MENÚ MÓVIL OVERLAY -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menú de navegación móvil">
+        <ul class="mobile-menu__list" role="menu">
+            <li class="mobile-menu__item" role="none">
+                <a href="#inicio" class="mobile-menu__link" role="menuitem">INICIO</a>
+            </li>
+            <li class="mobile-menu__item" role="none">
+                <a href="#nosotros" class="mobile-menu__link" role="menuitem">NOSOTROS</a>
+            </li>
+            <li class="mobile-menu__item" role="none">
+                <a href="#equipo" class="mobile-menu__link" role="menuitem">EQUIPO</a>
+            </li>
+            <li class="mobile-menu__item" role="none">
+                <a href="#historia" class="mobile-menu__link" role="menuitem">HISTORIA</a>
+            </li>
+            <li class="mobile-menu__item" role="none">
+                <a href="#contacto" class="mobile-menu__link" role="menuitem">CONTACTO</a>
+            </li>
+        </ul>
 
-    <section id="nosotros" class="seccionSegunda">
-        <article>
-            <h2>NOSOTROS</h2>
-        </article>
-    </section>
+        <!-- REDES SOCIALES -->
+        <div class="mobile-menu__social">
+            <a href="#" class="mobile-menu__social-link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:contact@example.com" class="mobile-menu__social-link" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/1234567890" class="mobile-menu__social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
 
-    <section id="equipo" class="seccionTercera">
-        <article>
-            <h2> EQUIPO</h2>
-        </article>
-    </section>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <section id="inicio" class="section section--primera">
+            <div class="section__content">
+                <h1 class="section__title">INICIO</h1>
+                <p>Contenido de la sección principal</p>
+            </div>
+        </section>
 
-    <section id="nuestraHistoria" class="seccionCuarta">
-        <article>
-            <h2>NUESTRA HISTORIA</h2>
-        </article>
-    </section>
+        <section id="nosotros" class="section section--segunda">
+            <div class="section__content">
+                <h2 class="section__title">NOSOTROS</h2>
+                <p>Información sobre nosotros</p>
+            </div>
+        </section>
 
-    <section id="contacto" class="seccionQuinta">
-        <article>
-            <h2>CONTACTO</h2>
-        </article>
-    </section>
+        <section id="equipo" class="section section--tercera">
+            <div class="section__content">
+                <h2 class="section__title">EQUIPO</h2>
+                <p>Nuestro equipo de trabajo</p>
+            </div>
+        </section>
+
+        <section id="historia" class="section section--cuarta">
+            <div class="section__content">
+                <h2 class="section__title">HISTORIA</h2>
+                <p>Nuestra historia</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="section section--quinta">
+            <div class="section__content">
+                <h2 class="section__title">CONTACTO</h2>
+                <p>Información de contacto</p>
+            </div>
+        </section>
+    </main>
     <script src="./js/menuToggle.js"></script>
-    
     <script src="./js/fixedNavBar.js"></script>
 </body>
 

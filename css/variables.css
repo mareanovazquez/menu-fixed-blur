@@ -1,7 +1,6 @@
 /* ===== CSS VARIABLES ===== */
 :root {
     /* === COLORS === */
-
     /* Primary Colors */
     --color-primary-text: #272727;
     /* Raisin black - texto principal */
@@ -83,21 +82,18 @@
     /* === LAYOUT === */
 
     /* Heights más comunes */
-    --height-nav-mobile: 3.125rem;
-    /* 50px */
-    --height-nav-desktop: 3.75rem;
-    /* 60px */
-    --height-article: 80vh;
-    --height-menu-mobile: 100vh;
+    --nav-height-mobile: 60px;
+    --nav-height-desktop: 70px;
+    
 
     /* Widths más reutilizables */
     --width-article: 80%;
-    
+
 
     /* Z-Index */
     --z-index-nav-fixed: 4444;
-    --z-index-menu-mobile: 99999;
-    --z-index-toggle: 9999;
+    --z-index-menu-mobile: 44444;
+    --z-index-toggle: 99999;
 
     /* === TRANSITIONS === */
     --transition-fast: 0.2s;

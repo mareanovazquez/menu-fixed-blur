@@ -35,11 +35,11 @@
     --color-section-text: #EFF1F3;
     /* Texto de secciones */
 
-    /* Menu Toggle Colors */
-    --color-toggle-bg: #F0EBE3;
-    /* Background toggle */
-    --color-toggle-line: #F3D0D7;
-    /* Líneas del toggle */
+    /* Menu Toggle Colors - CORREGIDO */
+    --color-toggle-bg: transparent;
+    /* Background toggle - transparente para que se vea mejor */
+    --color-toggle-line: #2E2836;
+    /* Líneas del toggle - mismo color que el texto de navegación */
     --color-menu-mobile-bg: #F0EBE3;
     /* Background menú móvil */
 

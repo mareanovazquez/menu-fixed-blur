@@ -1,8 +1,3 @@
-/**
- * MENU TOGGLE - Gestión del menú móvil
- * Adaptado para estructura BEM
- */
-
 class MenuToggle {
     constructor() {
         // Elementos del DOM
@@ -10,10 +5,10 @@ class MenuToggle {
         this.mobileMenu = document.getElementById('mobileMenu');
         this.mobileMenuLinks = document.querySelectorAll('.mobile-menu__link');
         this.socialLinks = document.querySelectorAll('.mobile-menu__social-link');
-        
+
         // Estado del menú
         this.isMenuOpen = false;
-        
+
         // Inicializar
         this.init();
     }
@@ -23,7 +18,7 @@ class MenuToggle {
             console.warn('MenuToggle: Elementos requeridos no encontrados');
             return;
         }
-        
+
         this.bindEvents();
     }
 
@@ -56,6 +51,9 @@ class MenuToggle {
         });
 
         // Cerrar menú al hacer click fuera (opcional)
+        // NOTA: Actualmente deshabilitado porque el menú ocupa 100vw x 100vh
+        // Habilitar solo si cambias las dimensiones del menú móvil en proyectos futuros
+        /*
         document.addEventListener('click', (e) => {
             if (this.isMenuOpen && 
                 !this.mobileMenu.contains(e.target) && 
@@ -63,6 +61,7 @@ class MenuToggle {
                 this.closeMenu();
             }
         });
+        */
 
         // Cerrar menú al cambiar el tamaño de ventana
         window.addEventListener('resize', () => {
@@ -82,47 +81,41 @@ class MenuToggle {
 
     openMenu() {
         this.isMenuOpen = true;
-        
+
         // Agregar clases BEM para estado activo
         this.menuToggle.classList.add('menu-toggle--active');
         this.mobileMenu.classList.add('mobile-menu--active');
-        
+
         // Actualizar atributos ARIA
         this.menuToggle.setAttribute('aria-expanded', 'true');
         this.menuToggle.setAttribute('aria-label', 'Cerrar menú de navegación');
-        
+
         // Prevenir scroll del body
         document.body.style.overflow = 'hidden';
-        
-        // Focus en el primer enlace del menú para accesibilidad
-        const firstLink = this.mobileMenu.querySelector('.mobile-menu__link');
-        if (firstLink) {
-            setTimeout(() => firstLink.focus(), 300);
-        }
-        
+
         // Disparar evento personalizado
         this.dispatchCustomEvent('menuOpened');
     }
 
     closeMenu() {
         if (!this.isMenuOpen) return;
-        
+
         this.isMenuOpen = false;
-        
+
         // Remover clases BEM de estado activo
         this.menuToggle.classList.remove('menu-toggle--active');
         this.mobileMenu.classList.remove('mobile-menu--active');
-        
+
         // Actualizar atributos ARIA
         this.menuToggle.setAttribute('aria-expanded', 'false');
         this.menuToggle.setAttribute('aria-label', 'Abrir menú de navegación');
-        
+
         // Restaurar scroll del body
         document.body.style.overflow = '';
-        
+
         // Devolver focus al botón toggle
         this.menuToggle.focus();
-        
+
         // Disparar evento personalizado
         this.dispatchCustomEvent('menuClosed');
     }
@@ -146,11 +139,9 @@ class MenuToggle {
         document.removeEventListener('keydown', this.handleEscape);
         document.removeEventListener('click', this.handleOutsideClick);
         window.removeEventListener('resize', this.handleResize);
-        
+
         // Limpiar estado
         this.closeMenu();
-        
-        console.log('MenuToggle: Instancia destruida');
     }
 }
 
@@ -158,13 +149,12 @@ class MenuToggle {
 document.addEventListener('DOMContentLoaded', () => {
     // Crear instancia global para acceso desde otros scripts si es necesario
     window.menuToggleInstance = new MenuToggle();
-    
+
     // Listeners para eventos personalizados (opcional)
     document.addEventListener('menuOpened', (e) => {
-        console.log('Menú móvil abierto', e.detail);
     });
-    
+
     document.addEventListener('menuClosed', (e) => {
-        console.log('Menú móvil cerrado', e.detail);
+
     });
 });

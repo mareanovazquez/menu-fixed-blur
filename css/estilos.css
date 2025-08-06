@@ -75,17 +75,103 @@ header .navBarMobile {
     justify-content: space-between;
     align-items: center;
     box-shadow: var(--shadow-nav);
-    animation: slideDown var(--transition-animation) var(--transition-ease);
+    
+    /* Animación de entrada desde arriba */
+    transform: translateY(-100%);
+    animation: slideDownMobile var(--transition-animation) var(--transition-ease) forwards;
+}
+
+/* Clase para ocultar el navbar mobile con animación */
+header .navBarMobile.hide {
+    animation: slideUpMobile var(--transition-animation) var(--transition-ease) forwards;
 }
 
 header .navBarMobile .brandMobile img {
     padding-top: 0.9375rem;
     /* 15px */
-    width: var(--width-brand-logo);
+    width: 120px;
 }
 
+/* Animación para el menú móvil desplegable */
+header .backMenu .menuShow {
+    background-color: var(--color-menu-mobile-bg);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: var(--height-menu-mobile);
+    padding: var(--spacing-sm);
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-bold);
+    line-height: 5rem;
+    text-align: left;
+    display: flex;
+    z-index: var(--z-index-menu-mobile);
+    flex-direction: column;
+    position: fixed;
+    top: 3.75rem;
+    
+    /* Animación de entrada del menú desplegable */
+    transform: translateX(-100%);
+    animation: slideInFromLeft var(--transition-medium) var(--transition-ease-in-out) forwards;
+}
+
+/* Estado inicial del menú móvil (oculto) */
 header .backMenu .menuMobile {
-    display: none;
+    transform: translateX(-100%);
+    transition: transform var(--transition-medium) var(--transition-ease-in-out);
+}
+
+/* Keyframes para animación del navbar mobile desde arriba */
+@keyframes slideDownMobile {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes para ocultar el navbar mobile hacia arriba */
+@keyframes slideUpMobile {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+/* Keyframes para el menú desplegable desde la izquierda */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes para ocultar el menú desplegable hacia la izquierda */
+@keyframes slideOutToLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+/* Clase para animar la salida del menú desplegable */
+header .backMenu .menuHide {
+    animation: slideOutToLeft var(--transition-medium) var(--transition-ease-in-out) forwards;
 }
 
 header .navBarMobile #toggle {
@@ -215,6 +301,9 @@ header .backMenu .navBarRRSS .itemMenuRRSS:hover {
 
 @media(min-width: 992px) {
 
+    header .backMenu .menuMobile {
+        display: none;
+    }
     header .navBarMobile {
         display: none;
     }
@@ -253,7 +342,7 @@ header .backMenu .navBarRRSS .itemMenuRRSS:hover {
     }
 
     header .navBar .brand img {
-        width: var(--width-brand-logo);
+        width: 120px;
         padding-left: var(--spacing-md);
     }
 

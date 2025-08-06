@@ -1,0 +1,124 @@
+/* ===== CSS VARIABLES ===== */
+:root {
+    /* === COLORS === */
+
+    /* Primary Colors */
+    --color-primary-text: #272727;
+    /* Raisin black - texto principal */
+    --color-primary-bg: #FEFEFE;
+    /* Background principal */
+    --color-accent-primary: #FED766;
+    /* Mustard - color principal */
+    --color-accent-secondary: #009FB7;
+    /* Moonstone - color secundario */
+
+    /* Navigation Colors */
+    --color-nav-bg: #F0EBE3;
+    /* Background navegación */
+    --color-nav-bg-blur: rgba(240, 235, 227, 0.5);
+    /* Background navegación con blur */
+    --color-nav-text: #2E2836;
+    /* Texto navegación */
+    --color-nav-text-hover: #EFF1F3;
+    /* Texto navegación hover */
+
+    /* Section Background Colors */
+    --color-section-1: #F3E2E5;
+    /* Primera sección */
+    --color-section-2: #F3D0D7;
+    /* Segunda sección */
+    --color-section-3: #E9C8CF;
+    /* Tercera sección */
+    --color-section-4: #DEC2C7;
+    /* Cuarta sección */
+    --color-section-5: #D3BCC0;
+    /* Quinta sección */
+    --color-section-text: #EFF1F3;
+    /* Texto de secciones */
+
+    /* Menu Toggle Colors */
+    --color-toggle-bg: #F0EBE3;
+    /* Background toggle */
+    --color-toggle-line: #F3D0D7;
+    /* Líneas del toggle */
+    --color-menu-mobile-bg: #F0EBE3;
+    /* Background menú móvil */
+
+    /* Shadow Colors */
+    --shadow-primary: rgba(0, 0, 0, 0.3);
+    --shadow-secondary: rgba(0, 0, 0, 0.22);
+
+    /* === TYPOGRAPHY === */
+
+    /* Font Families */
+    --font-primary: "Manrope", sans-serif;
+    --font-secondary: "Urbanist", sans-serif;
+
+    /* Font Sizes (usando rem) */
+    --font-size-h2: 3.125rem;
+    /* 50px */
+    --font-size-menu-desktop: 1rem;
+    /* 16px */
+    --font-size-menu-mobile: 1.25rem;
+    /* 20px */
+    --font-size-social-icons: 2.5rem;
+    /* 40px */
+
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-bold: 800;
+
+    /* === SPACING === */
+
+    /* Sistema de espaciado consistente */
+    --spacing-xs: 0.25rem;
+    /* 4px */
+    --spacing-sm: 0.625rem;
+    /* 10px */
+    --spacing-md: 1.25rem;
+    /* 20px */
+    --spacing-lg: 3.125rem;
+    /* 50px */
+
+    /* === LAYOUT === */
+
+    /* Heights más comunes */
+    --height-nav-mobile: 3.125rem;
+    /* 50px */
+    --height-nav-desktop: 3.75rem;
+    /* 60px */
+    --height-article: 80vh;
+    --height-menu-mobile: 100vh;
+
+    /* Widths más reutilizables */
+    --width-article: 80%;
+    --width-nav-desktop: 80%;
+    --width-brand-logo: 7.5rem;
+    /* 120px */
+
+    /* Z-Index */
+    --z-index-nav-fixed: 4444;
+    --z-index-menu-mobile: 99999;
+    --z-index-toggle: 9999;
+
+    /* === TRANSITIONS === */
+    --transition-fast: 0.2s;
+    --transition-medium: 0.3s;
+    --transition-slow: 0.5s;
+    --transition-animation: 0.7s;
+
+    /* Transition Effects */
+    --transition-ease: ease;
+    --transition-ease-in-out: ease-in-out;
+
+    /* === EFFECTS === */
+
+    /* Blur Effect */
+    --blur-backdrop: blur(10px);
+
+    /* Box Shadows */
+    --shadow-nav: var(--shadow-primary) 0px 19px 38px, var(--shadow-secondary) 0px 15px 12px;
+
+    /* === BREAKPOINTS === */
+    --breakpoint-desktop: 992px;
+}

@@ -1,3 +1,4 @@
+@import url(./variables.css);
 
 * {
     margin: 0;
@@ -9,50 +10,50 @@ html {
 }
 
 body {
-    font-family: "Manrope", sans-serif;
-    color: #272727;
-    background-color: #FEFEFE ;
+    font-family: var(--font-primary);
+    font-size: 16px;  /* Base para rem */
+    color: var(--color-primary-text);
+    background-color: var(--color-primary-bg);
 }
 
 section {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
 }
 
 article {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: var(--width-article);
     margin: 0 auto;
-    height: 80vh;
-    color: #EFF1F3;
-    border-radius:15px;
-
+    height: var(--height-article);
+    color: var(--color-section-text);
 }
 
 h2 {
-    font-size: 50px;
+    font-size: var(--font-size-h2);
     text-align: center;
 }
+
 .seccionPrimera article {
-    background-color:#F3E2E5;
+    background-color: var(--color-section-1);
 }
 
 .seccionSegunda article {
-    background-color: #F3D0D7;
+    background-color: var(--color-section-2);
 }
 
 .seccionTercera article {
-    background-color:#E9C8CF
+    background-color: var(--color-section-3);
 }
 
 .seccionCuarta article {
-    background-color: #DEC2C7;
+    background-color: var(--color-section-4);
 }
 
 .seccionQuinta article {
-    background-color: #D3BCC0;
+    background-color: var(--color-section-5);
 }
 
 /*MENÚ TOGGLE CELULAR - TABLET*/
@@ -62,23 +63,23 @@ header .navBar {
 }
 
 header .navBarMobile {
-    background-color:#F0EBE3; ;
+    background-color: var(--color-nav-bg);
     width: 100%;
-    height: 50px;
+    height: var(--height-nav-mobile);
     position: fixed;
     top: 0;
-    padding-bottom: 20px;
+    padding-bottom: var(--spacing-md);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;        animation: slideDown 0.7s ease;
-
+    box-shadow: var(--shadow-nav);
+    animation: slideDown var(--transition-animation) var(--transition-ease);
 } 
 
 header .navBarMobile .brandMobile img {
-    padding-top: 15px;
-    width: 120px;
+    padding-top: 0.9375rem; /* 15px */
+    width: var(--width-brand-logo);
 }
 
 header .backMenu .menuMobile {
@@ -86,71 +87,69 @@ header .backMenu .menuMobile {
 }
 
 header .navBarMobile #toggle {
-    width: 35px;
-    height: 30px;
+    width: 2.1875rem; /* 35px - específico del toggle */
+    height: 1.875rem; /* 30px - específico del toggle */
     margin-left: auto;
-    margin-top: 10px;
-    padding: 12px;
-    background-color: #F0EBE3;
+    margin-top: 0.625rem; /* 10px */
+    padding: 0.75rem; /* 12px */
+    background-color: var(--color-toggle-bg);
 }
 
 header .navBarMobile #toggle div {
     width: 100%;
-    height: 5px;
-    background: #F3D0D7;
-    margin: 4px auto;
-    transition: all 0.3s ease-in-out;
+    height: 0.3125rem; /* 5px - específico del toggle */
+    background: var(--color-toggle-line);
+    margin: var(--spacing-xs) auto;
+    transition: all var(--transition-medium) var(--transition-ease-in-out);
     backface-visibility: hidden;
-    z-index: 9999;
+    z-index: var(--z-index-toggle);
     position: sticky;
-    border-radius: 5px;
 }
 
 header .navBarMobile .on .one {
-    transform: rotate(45deg) translate(5px, 5px);
-    transition: 0.5s;
+    transform: rotate(45deg) translate(0.3125rem, 0.3125rem); /* 5px */
+    transition: var(--transition-slow);
 }
 
 header .navBarMobile .on .two {
     opacity: 0;
-    transition: 0.5s;
+    transition: var(--transition-slow);
 }
 
 header .navBarMobile .on .three {
-    transform: rotate(-45deg) translate(7px, -8px);
-    transition: 0.5s;
+    transform: rotate(-45deg) translate(0.4375rem, -0.5rem); /* 7px, -8px */
+    transition: var(--transition-slow);
 }
 
 /* estilos MENÚ CELULAR*/
 
 header .backMenu .menuShow {
-    background-color: #F0EBE3;
+    background-color: var(--color-menu-mobile-bg);
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: 100vh;
-    padding: 10px;
-    font-family: "Urbanist", sans-serif;
-    font-weight: 800;
-    line-height: 80px;
+    height: var(--height-menu-mobile);
+    padding: var(--spacing-sm);
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-bold);
+    line-height: 5rem; /* 80px */
     text-align: left;
     display: flex;
-    z-index: 99999;
+    z-index: var(--z-index-menu-mobile);
     flex-direction: column;
     position: fixed;
-    top: 60px;
-    }
-
+    top: 3.75rem; /* 60px */
+}
 
 header .backMenu .itemMenuMobile {
     text-decoration: none;
-    font-size: 20px;
-    color: #2E2836;
+    font-size: var(--font-size-menu-mobile);
+    color: var(--color-nav-text);
 }
 
 header .backMenu .itemMenuMobile:hover {
-    color: #EFF1F3;
-    transition: 0.2s;
+    color: var(--color-nav-text-hover);
+    transition: var(--transition-fast);
 }
 
 header .backMenu .menuMobile .opcionesMobile {
@@ -161,21 +160,20 @@ header .backMenu .menuMobile .subMenuCeluDesplegado {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    padding-left: 50px;
-    font-size: 16px;
+    padding-left: var(--spacing-lg);
+    font-size: 1rem; /* 16px - tamaño base */
     list-style: none;
 }
 
 .itemSubmenuCelu a {
-    color: #2E2836;
+    color: var(--color-nav-text);
     text-decoration: none;
 }
 
 .itemSubmenuCelu a:hover {
-    color: #EFF1F3;
-    transition: 0.2s;
+    color: var(--color-nav-text-hover);
+    transition: var(--transition-fast);
 }
-
 
 .opciones {
     display: none;
@@ -185,25 +183,23 @@ header .backMenu .navBarRRSS {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding: 20px;
+    padding: var(--spacing-md);
 }
 
 header .backMenu .navBarRRSS .itemMenuRRSS {
     text-decoration: none;
-    font-family: "Manrope", sans-serif;
-    color: #2E2836;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 40px;
+    font-family: var(--font-primary);
+    color: var(--color-nav-text);
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+    font-size: var(--font-size-social-icons);
 }
 
 header .backMenu .navBarRRSS .itemMenuRRSS:hover {
-    color: #EFF1F3;
-    transition: 0.2s;
-    padding: 20px;
+    color: var(--color-nav-text-hover);
+    transition: var(--transition-fast);
+    padding: var(--spacing-md);
 }
-
-
 
 @media(min-width: 992px) {
 
@@ -213,7 +209,6 @@ header .backMenu .navBarRRSS .itemMenuRRSS:hover {
 
     header .navBarMobile .backMenu .navBarRRSS {
         display: none;
-        
     }
 
     header .backMenu .menuShow {
@@ -221,28 +216,28 @@ header .backMenu .navBarRRSS .itemMenuRRSS:hover {
     }
 
     header .navBar {
-        background-color: #F0EBE3;
-        height: 60px;
+        background-color: var(--color-nav-bg);
+        height: var(--height-nav-desktop);
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 80%;
+        width: var(--width-nav-desktop);
         margin-left: auto;
         margin-right: auto;       
-        margin-top: 10px;
-        border-radius: 15px;
-        font-family: "Manrope", sans-serif;
+        margin-top: var(--spacing-sm);
+        font-family: var(--font-primary);
     }
 
     header .navBar.fixed {
         position: fixed;
-        width: 90%;
+        width: 90%; /* Usado solo aquí - no necesita variable */
         top: 0%;
         right: 5%;
-        background-color: rgba(240, 235, 227, 0.5);
-        z-index: 4444;
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;        animation: slideDown 0.7s ease;
-        backdrop-filter: blur(10px);
+        background-color: var(--color-nav-bg-blur);
+        z-index: var(--z-index-nav-fixed);
+        box-shadow: var(--shadow-nav);
+        animation: slideDown var(--transition-animation) var(--transition-ease);
+        backdrop-filter: var(--blur-backdrop);
     }
 
     header .navBar .brand {
@@ -250,25 +245,24 @@ header .backMenu .navBarRRSS .itemMenuRRSS:hover {
     }
 
     header .navBar .brand img {
-        width: 120px;
-        padding-left: 20px;
-
+        width: var(--width-brand-logo);
+        padding-left: var(--spacing-md);
     }
 
     header .navBar .itemMenu {
         display: inline-block;
-        padding-right: 10px;
-        font-family: "Urbanist", sans-serif;
-        font-weight: 800;
-        font-size: 16px;
+        padding-right: var(--spacing-sm);
+        font-family: var(--font-secondary);
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-menu-desktop);
         text-decoration: none;
-        color: #2E2836;
+        color: var(--color-nav-text);
     }
 
     header .navBar .itemMenu:hover {
-        color: #EFF1F3;
-        font-weight: 800;
-        transition: 0.2s;
+        color: var(--color-nav-text-hover);
+        font-weight: var(--font-weight-bold);
+        transition: var(--transition-fast);
     }
 
     .backMenu .menuShow {
@@ -278,16 +272,14 @@ header .backMenu .navBarRRSS .itemMenuRRSS:hover {
     .menuDesktop ul {
         display: none;
     }
-
-
 }
 
 @keyframes slideDown {
-        from {
-            transform: translateY(-100%);
-        }
-
-        to {
-            transform: translateY(0);
-        }
+    from {
+        transform: translateY(-100%);
     }
+
+    to {
+        transform: translateY(0);
+    }
+}

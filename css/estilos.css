@@ -11,7 +11,8 @@ html {
 
 body {
     font-family: var(--font-primary);
-    font-size: 16px;  /* Base para rem */
+    font-size: 16px;
+    /* Base para rem */
     color: var(--color-primary-text);
     background-color: var(--color-primary-bg);
 }
@@ -75,10 +76,11 @@ header .navBarMobile {
     align-items: center;
     box-shadow: var(--shadow-nav);
     animation: slideDown var(--transition-animation) var(--transition-ease);
-} 
+}
 
 header .navBarMobile .brandMobile img {
-    padding-top: 0.9375rem; /* 15px */
+    padding-top: 0.9375rem;
+    /* 15px */
     width: var(--width-brand-logo);
 }
 
@@ -87,17 +89,22 @@ header .backMenu .menuMobile {
 }
 
 header .navBarMobile #toggle {
-    width: 2.1875rem; /* 35px - específico del toggle */
-    height: 1.875rem; /* 30px - específico del toggle */
+    width: 2.1875rem;
+    /* 35px - específico del toggle */
+    height: 1.875rem;
+    /* 30px - específico del toggle */
     margin-left: auto;
-    margin-top: 0.625rem; /* 10px */
-    padding: 0.75rem; /* 12px */
+    margin-top: 0.625rem;
+    /* 10px */
+    padding: 0.75rem;
+    /* 12px */
     background-color: var(--color-toggle-bg);
 }
 
 header .navBarMobile #toggle div {
     width: 100%;
-    height: 0.3125rem; /* 5px - específico del toggle */
+    height: 0.3125rem;
+    /* 5px - específico del toggle */
     background: var(--color-toggle-line);
     margin: var(--spacing-xs) auto;
     transition: all var(--transition-medium) var(--transition-ease-in-out);
@@ -107,7 +114,8 @@ header .navBarMobile #toggle div {
 }
 
 header .navBarMobile .on .one {
-    transform: rotate(45deg) translate(0.3125rem, 0.3125rem); /* 5px */
+    transform: rotate(45deg) translate(0.3125rem, 0.3125rem);
+    /* 5px */
     transition: var(--transition-slow);
 }
 
@@ -117,7 +125,8 @@ header .navBarMobile .on .two {
 }
 
 header .navBarMobile .on .three {
-    transform: rotate(-45deg) translate(0.4375rem, -0.5rem); /* 7px, -8px */
+    transform: rotate(-45deg) translate(0.4375rem, -0.5rem);
+    /* 7px, -8px */
     transition: var(--transition-slow);
 }
 
@@ -132,13 +141,15 @@ header .backMenu .menuShow {
     padding: var(--spacing-sm);
     font-family: var(--font-secondary);
     font-weight: var(--font-weight-bold);
-    line-height: 5rem; /* 80px */
+    line-height: 5rem;
+    /* 80px */
     text-align: left;
     display: flex;
     z-index: var(--z-index-menu-mobile);
     flex-direction: column;
     position: fixed;
-    top: 3.75rem; /* 60px */
+    top: 3.75rem;
+    /* 60px */
 }
 
 header .backMenu .itemMenuMobile {
@@ -161,7 +172,8 @@ header .backMenu .menuMobile .subMenuCeluDesplegado {
     flex-direction: column;
     text-decoration: none;
     padding-left: var(--spacing-lg);
-    font-size: 1rem; /* 16px - tamaño base */
+    font-size: 1rem;
+    /* 16px - tamaño base */
     list-style: none;
 }
 
@@ -221,18 +233,14 @@ header .backMenu .navBarRRSS .itemMenuRRSS:hover {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: var(--width-nav-desktop);
-        margin-left: auto;
-        margin-right: auto;       
-        margin-top: var(--spacing-sm);
+        
         font-family: var(--font-primary);
     }
 
     header .navBar.fixed {
         position: fixed;
-        width: 90%; /* Usado solo aquí - no necesita variable */
-        top: 0%;
-        right: 5%;
+        width: 100%;
+        top: 0;
         background-color: var(--color-nav-bg-blur);
         z-index: var(--z-index-nav-fixed);
         box-shadow: var(--shadow-nav);
